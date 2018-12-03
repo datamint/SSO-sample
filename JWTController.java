@@ -29,6 +29,8 @@ public class JWTController {
         claims.setIssuer("Organization");
         claims.setGeneratedJwtId();
         claims.setIssuedAtToNow();
+        // this proparty can be empty but it must be populated
+        claims.setAudience("");
 
         // Set the user
         claims.setSubject("user@customer.com");
