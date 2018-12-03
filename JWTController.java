@@ -29,6 +29,8 @@ public class JWTController {
         claims.setIssuer("Organization");
         claims.setGeneratedJwtId();
         claims.setIssuedAtToNow();
+	// This property can be empty, but must be present in token
+	claims.setAudience("");
 
         // Set the user
         claims.setSubject("user@customer.com");
